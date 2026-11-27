@@ -1,0 +1,13 @@
+{
+  "project_name": "Customer Database Cleaning & Organization",
+  "project_slug": "customer-database-cleaning",
+  "description": "A demonstration project showing how to clean, standardize, and organize customer spreadsheet data.",
+  "input_format": "xlsx",
+  "output_formats": ["xlsx", "pdf"],
+  "remove_duplicates": true,
+  "standardize_names": true,
+  "standardize_emails": true,
+  "standardize_dates": true,
+  "preserve_original_data": true,
+  "use_fictional_data": true
+}
