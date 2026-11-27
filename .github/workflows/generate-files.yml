@@ -1,0 +1,39 @@
+name: Generate Portfolio Files
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "projects/customer-database-cleaning/**"
+      - "template/**"
+      - "requirements.txt"
+      - ".github/workflows/generate-files.yml"
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Generate project files
+        run: |
+          python projects/customer-database-cleaning/generate.py
+
+      - name: Upload generated files
+        uses: actions/upload-artifact@v4
+        with:
+          name: customer-database-portfolio
+          path: |
+            output/Excel/
+            output/PDF/
