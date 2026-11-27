@@ -53,6 +53,18 @@ output/
 
 All sample projects in this repository are demonstrations of spreadsheet skills and automation. They are not presented as completed client projects.
 
+## Completed Projects
+
+### 1. Customer Database Cleaning & Organization
+
+- Cleaned and standardized fictional customer records.
+- Removed 2 duplicate records from 7 original records.
+- Generated a formatted Excel workbook.
+- Generated a PDF report.
+- Successfully tested automated generation using GitHub Actions.
+
+[View Project Details](projects/customer-database-cleaning/README.md)
+
 ## Status
 
-Initial setup in progress.
+First demonstration project completed and tested.
