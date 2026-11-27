@@ -15,10 +15,8 @@ from pdf_template import create_pdf_report
 
 
 def clean_customer_data(data):
-    # Remove duplicate records
-    data = data.drop_duplicates()
 
-    # Standardize text fields
+    # Standardize text fields first
     if "Name" in data.columns:
         data["Name"] = data["Name"].astype(str).str.strip().str.title()
 
@@ -33,6 +31,9 @@ def clean_customer_data(data):
         data["Date"] = pd.to_datetime(
             data["Date"], errors="coerce"
         )
+
+    # Remove duplicates after standardization
+    data = data.drop_duplicates()
 
     return data
 
