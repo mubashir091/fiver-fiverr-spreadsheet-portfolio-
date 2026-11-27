@@ -42,7 +42,7 @@ def main():
         os.path.dirname(__file__), "sample_data"
     )
 
-    input_file = os.path.join(sample_dir, "customers.xlsx")
+    input_file = os.path.join(sample_dir, "customers.csv")
 
     output_dir = os.path.join(
         ROOT_DIR, "output", "Excel"
@@ -50,7 +50,7 @@ def main():
 
     os.makedirs(output_dir, exist_ok=True)
 
-    data = pd.read_excel(input_file)
+    data = pd.read_csv(input_file, dtype={"Phone": str})
     cleaned_data = clean_customer_data(data)
 
     excel_path = os.path.join(
