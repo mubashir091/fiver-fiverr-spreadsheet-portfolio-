@@ -156,8 +156,52 @@ def create_pdf_report(
         "and final cleaned records.",
         styles["ReportBody"]
     ))
+       # 2. Before and After Comparison
+    elements.append(Paragraph(
+        "Before vs After Data Cleaning",
+        styles["SectionHeading"]
+    ))
 
-    # 2. Summary statistics
+    elements.append(Paragraph(
+        "The following examples illustrate how inconsistent customer "
+        "information is standardized during the cleaning process.",
+        styles["ReportBody"]
+    ))
+
+    comparison_data = [
+        [
+            Paragraph("<b>Field</b>", styles["SmallCell"]),
+            Paragraph("<b>Before Cleaning</b>", styles["SmallCell"]),
+            Paragraph("<b>After Cleaning</b>", styles["SmallCell"])
+        ],
+        [
+            Paragraph("Customer Name", styles["SmallCell"]),
+            Paragraph("  JOHN smith  ", styles["SmallCell"]),
+            Paragraph("John Smith", styles["SmallCell"])
+        ],
+        [
+            Paragraph("Email", styles["SmallCell"]),
+            Paragraph("JOHN@EXAMPLE.COM ", styles["SmallCell"]),
+            Paragraph("john@example.com", styles["SmallCell"])
+        ],
+        [
+            Paragraph("City", styles["SmallCell"]),
+            Paragraph("  lahore  ", styles["SmallCell"]),
+            Paragraph("Lahore", styles["SmallCell"])
+        ],
+        [
+            Paragraph("Date", styles["SmallCell"]),
+            Paragraph("05/01/2026", styles["SmallCell"]),
+            Paragraph("05-Jan-2026", styles["SmallCell"])
+        ]
+    ]
+
+    elements.append(make_table(
+        comparison_data,
+        widths=[45 * mm, 65 * mm, 65 * mm],
+        font_size=8
+    ))
+     # 2. Summary statistics
     elements.append(Paragraph(
         "Data Cleaning Summary",
         styles["SectionHeading"]
