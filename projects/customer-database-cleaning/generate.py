@@ -338,8 +338,8 @@ def main():
     pdf_path,
     summary=summary,
     validation_report=validation_report
-)      
-    # Generate Fiverr Portfolio Showcase
+    )      
+  # Generate Fiverr Portfolio Showcase
     showcase_path = os.path.join(
         pdf_dir,
         "customer_database_portfolio_showcase.pdf"
