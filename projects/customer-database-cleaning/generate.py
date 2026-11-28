@@ -17,6 +17,7 @@ sys.path.insert(0, TEMPLATE_DIR)
 
 from excel_template import create_excel_file
 from pdf_template import create_pdf_report
+from portfolio_showcase import create_portfolio_showcase
 
 
 # ==========================================
@@ -337,7 +338,16 @@ def main():
     pdf_path,
     summary=summary,
     validation_report=validation_report
-)
+)    # Generate Fiverr Portfolio Showcase
+    showcase_path = os.path.join(
+        pdf_dir,
+        "customer_database_portfolio_showcase.pdf"
+    )
+
+    create_portfolio_showcase(
+        summary,
+        showcase_path
+    )
 
     # --------------------------------------
     # SAVE VALIDATION REPORT
