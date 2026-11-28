@@ -331,11 +331,13 @@ def main():
     )
 
     create_pdf_report(
-        "Customer Database Cleaning",
-        "Professional customer data cleaning and quality assessment.",
-        cleaned_data,
-        pdf_path
-    )
+    "Customer Database Cleaning",
+    "Professional customer data cleaning and quality assessment.",
+    cleaned_data,
+    pdf_path,
+    summary=summary,
+    validation_report=validation_report
+)
 
     # --------------------------------------
     # SAVE VALIDATION REPORT
