@@ -156,6 +156,47 @@ def create_pdf_report(
         "and final cleaned records.",
         styles["ReportBody"]
     ))
+    # 2. Data Quality Dashboard
+    elements.append(Paragraph(
+        "Data Quality Dashboard",
+        styles["SectionHeading"]
+    ))
+
+    dashboard_data = [[
+        Paragraph(
+            f"<b>{safe_text(summary.get('Original records', 0))}</b><br/>Original Records",
+            styles["SmallCell"]
+        ),
+        Paragraph(
+            f"<b>{safe_text(summary.get('Duplicate records detected', 0))}</b><br/>Duplicates Detected",
+            styles["SmallCell"]
+        ),
+        Paragraph(
+            f"<b>{safe_text(summary.get('Final records', 0))}</b><br/>Final Records",
+            styles["SmallCell"]
+        ),
+        Paragraph(
+            f"<b>{safe_text(summary.get('Records flagged for review', 0))}</b><br/>Records for Review",
+            styles["SmallCell"]
+        )
+    ]]
+
+    dashboard = Table(
+        dashboard_data,
+        colWidths=[65 * mm, 65 * mm, 65 * mm, 65 * mm]
+    )
+
+    dashboard.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, -1), BLUE),
+        ("BOX", (0, 0), (-1, -1), 0.8, NAVY),
+        ("INNERGRID", (0, 0), (-1, -1), 0.5, WHITE),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("TOPPADDING", (0, 0), (-1, -1), 14),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 14)
+    ]))
+
+    elements.append(dashboard)
        # 2. Before and After Comparison
     elements.append(Paragraph(
         "Before vs After Data Cleaning",
