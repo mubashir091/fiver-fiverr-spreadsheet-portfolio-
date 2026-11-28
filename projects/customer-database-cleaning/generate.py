@@ -320,7 +320,7 @@ def main():
     raw_data=data,
     validation_report=validation_report,
     summary=summary
-)
+    )
 
     # --------------------------------------
     # GENERATE PDF REPORT
@@ -338,7 +338,7 @@ def main():
     pdf_path,
     summary=summary,
     validation_report=validation_report
-        )
+    )
 
     # Generate Fiverr Portfolio Showcase
     showcase_path = os.path.join(
