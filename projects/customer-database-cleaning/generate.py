@@ -314,9 +314,12 @@ def main():
     )
 
     create_excel_file(
-        cleaned_data,
-        excel_path
-    )
+    cleaned_data,
+    excel_path,
+    raw_data=data,
+    validation_report=validation_report,
+    summary=summary
+)
 
     # --------------------------------------
     # GENERATE PDF REPORT
