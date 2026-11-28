@@ -1,70 +1,59 @@
-# fiver-fiverr-spreadsheet-portfolio-
+Fiverr Spreadsheet & Data Management Portfolio
 
-# Fiverr Spreadsheet Portfolio
+A collection of practical projects demonstrating professional spreadsheet organization, data cleaning, data validation, reporting, and automation.
 
-A Python-based portfolio project demonstrating spreadsheet data cleaning, formatting, organization, and quality checks.
+Featured Project
 
-## Project Goals
+Customer Database Cleaning & Data Quality
 
-This repository contains reusable tools for preparing professional spreadsheet portfolio samples.
+A complete demonstration of transforming an inconsistent customer database into an organized and professionally formatted dataset.
 
-Our first demonstration project is:
+Project features:
 
-**Customer Database Cleaning & Organization**
+- Customer data cleaning and standardization.
+- Duplicate record detection.
+- Email format validation.
+- Missing information detection.
+- Date standardization.
+- Professional multi-sheet Excel workbook.
+- PDF data quality report.
+- Validation report for records requiring review.
 
-## Technology
+Excel workbook includes:
 
+1. Raw Data
+2. Cleaned Data
+3. Validation Report
+4. Summary
+
+PDF deliverable: A professionally formatted report containing project information, cleaning statistics, validation findings, and cleaned customer records.
+
+"View the Customer Database Cleaning Project" (projects/customer-database-cleaning/README.md)
+
+Tools & Technologies
+
+- Microsoft Excel
 - Python
-- pandas
-- openpyxl
+- Pandas
+- OpenPyXL
 - ReportLab
-- GitHub Actions
+- CSV processing
 
-## Planned Features
+Project Standards
 
-- Remove duplicate records using defined rules.
-- Standardize names, emails, dates, and other fields.
-- Organize spreadsheet columns and worksheets.
-- Validate data and flag inconsistencies.
-- Preserve original raw data.
-- Generate Excel workbooks.
-- Generate PDF project case studies.
-- Automate file generation using GitHub Actions.
-
-## Project Structure
-
-```text
-template/
-projects/
-output/
-.github/
-```
-
-## Quality Standards
-
-- Use fictional or public demonstration data.
-- Preserve original source data.
+- Preserve original data.
 - Never invent missing information.
-- Flag ambiguous records instead of silently deleting them.
-- Document important changes.
-- Include quality checks in every project.
+- Document cleaning decisions.
+- Flag questionable records for review.
+- Use fictional data for demonstration projects.
+- Produce clear, organized, client-friendly deliverables.
 
-## Portfolio Disclaimer
+Portfolio Disclaimer
 
-All sample projects in this repository are demonstrations of spreadsheet skills and automation. They are not presented as completed client projects.
+All projects in this repository are demonstration samples created to showcase spreadsheet and data-management capabilities. They are not presented as completed client engagements.
 
-## Completed Projects
+Project Status
 
-### 1. Customer Database Cleaning & Organization
+Customer Database Cleaning: Development and output verification in progress.
 
-- Cleaned and standardized fictional customer records.
-- Removed 2 duplicate records from 7 original records.
-- Generated a formatted Excel workbook.
-- Generated a PDF report.
-- Successfully tested automated generation using GitHub Actions.
-
-[View Project Details](projects/customer-database-cleaning/README.md)
-
-## Status
-
-First demonstration project completed and tested.
+More spreadsheet and data-management projects will be added to this portfolio.
